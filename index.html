@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio_Dine</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        .resume-btn {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            justify-items: center;
+            font-size: 18px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .resume-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+
+        .resume-btn:focus {
+            outline: none;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        div {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-g"></i>
+                    <div class="logo-text">Geraldine Absalon Dadural</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li style="font-weight: bolder;"><a href="#" onclick="showSection('home')">Home</a></li>
+                        <li style="font-weight: bolder;"><a href="#" onclick="showSection('resume')">Resume</a></li>
+                        <li style="font-weight: bolder;"><a href="#" onclick="showSection('contact')">Contact</a></li>
+                        <li style="font-weight: bolder;"><a href="#" onclick="showSection('applicationletter')">Application Letter</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <!-- Home Section -->
+            <div id="home" class="section">
+                <div class="container" style="margin-top: -10%;">
+                    <div class="hero-pic">
+                        <img src="images/dine.jpg" alt="profile pic">
+                    </div>
+                    <div class="hero-text">
+                        <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                        <div style="font-size: xx-large; margin-top: 25px; margin-bottom: 15px; font-weight: bolder;">Geraldine Absalon Dadural</div>
+                        <p>Bachelor's degree in Computer Science from Don Mariano Marcos Memorial State University - South La Union Campus, with a strong dedication, and passion.</p>
+
+                        <div style="font-size: xx-large; margin-top: 25px; margin-bottom: 15px; font-weight: bolder;">Job Objective</div>
+                        <p>Seeking an opportunity to leverage my skills, knowledge and creative writing abilities in a collaborative environment.
+                            Eager to contribute to innovative projects, learn from experienced professionals, and grow within a forward-thinking
+                            company.
+                            </p>
+                        <div class="btn-group">
+                            <a href="#" class="btn active" id="moreInfoBtn">Get to know me more</a>
+                        </div>
+
+                        <div id="moreInfo" style="display: none;">
+                            <div style="font-size: xx-large; margin-top: 25px; margin-bottom: 15px; font-weight: bolder;">About</div>
+                            <p style="margin-bottom: 6%;">With my background in Computer Science and hands-on experience in technical support and front-end development, I am excited to bring a blend of technical expertise and problem-solving skills to a dynamic team environment.</p>
+                        </div>
+
+                        <div class="social" style="margin-bottom: 30px; margin-top: 20px;">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                            <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resume Section -->
+            <div id="resume" class="section" style="display: none;">
+                <div class="container" style="margin-top: -4%;">
+                    <h2>Resume</h2>
+                </div>
+
+                <!-- Personal Information Section -->
+                <button class="resume-btn" onclick="togglePersonalInfo()">Personal Information</button>
+                <div id="personal-info" style="display: none;">
+                    <div style="font-size: x-large;">Personal Information</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Address: San Nicolas East Agoo, La Union</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Age: 23 years old</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Gender: Female</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Civil Status: Single</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Citizenship: Filipino</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Height: 5'1"</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Birthdate: August 18, 2001</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Religion: Roman Catholic</div>
+                </div>
+
+                <!-- Family Background Section -->
+                <button class="resume-btn" onclick="toggleFamilyBackground()">Family Background</button>
+                <div id="family-background" style="display: none;">
+                    <div style="font-size: x-large;">Family Background</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Name of Mother: Corazon Absalon - Retired Nurse  </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Name of Father: Johnny Dadural  - N/A</div>
+                </div>
+
+                <!-- Work Experience Section -->
+                <button class="resume-btn" onclick="toggleWorkExperience()">Work Experience</button>
+                <div id="work-experience" style="display: none;">
+                    <div style="font-size: x-large;">Work Experience</div>
+                    <!-- Add work experience details here -->
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;"> On the Job Training (La Union MultiPurpose Cooperative) - July 2023 - August 2023 </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Sorting of employee’s application for leave.</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Collaborate with other accounting | loan teams.                    </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Calculating their assets, liability, and owner’s equity.</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Preparing their cashflow reports weekly.</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Depositing their cash on destined banks.</div>
+
+
+                    <div style="font-weight: bold; font-size: larger; margin-top: 9px; margin-bottom: 5px;"> Part Time | Projects (as a student up to now) - July 2023 to present </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Unveiling the Social Consequences and Gossip behavior in rural communities (client’s thesis)</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• Library Management system using Laravel.</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">• SK Treasurer (May 2024 to present)</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">•  Cashier at 698 Shopping Center Agoo La Union (September 14-29, 2024)</div>
+                    
+                    
+                    
+            
+
+                </div>
+
+                <!-- Skills Section -->
+                <button class="resume-btn" onclick="toggleSkills()">Skills</button>
+                <div id="skills" style="display: none;">
+                    <div style="font-size: x-large;">Skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Accounting Skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Mathematical ability</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Adaptability</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Communication Skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Encoding skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Problem solving Skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Microsoft Office Apps</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Proficient in video</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Photo editing</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Programming Skills</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Time Management</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Meticulous</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Collaboration</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Willingness</div>
+                </div>
+
+                <!-- Achievements Section -->
+                <button class="resume-btn" onclick="toggleAchievements()">Certificates | Seminars| Achievements</button>
+                <div id="achievements" style="display: none;">
+                    <div style="font-size: x-large;">Achievements</div>
+                    
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Introduction to Natural Language Processing (2024)     </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">On-the-Job Training (August 13, 2024)                    </div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Certificate for Recognition in Adobe Photoshop Certificate for Recognition for excellent
+                        performance as one of the Top Scorers in PC Troubleshooting | Maintenance Quiz during workshop
+                        (June 30, 2023)
+                        </div>
+                        <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Certificate of attendance in predeployment training. and Certificate of participation for seminar on
+                            comsciyahan 2023
+                            </div>
+                        <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;"> Poster Designing and Financial Literacy and Investment Planning JDA Hall | College of Computer
+                            Science DMMMSU-SLUC, Agoo La Union March 20, 2023
+                                </div>
+                      <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;"> 40 Hours Hands On Training Workshop College of Computer Science | DMMMSU-SLUC June 2023
+                                        </div>
+
+                           
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contact" class="section" style="display: none;">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Phone: 09664914130</div>
+                    <div style="font-weight: bold; font-size: larger; margin-top: 5px; margin-bottom: 5px;">Email: gadadural050818@gmail.com</div>
+                </div>
+            </div>
+
+
+
+            <!-- Application Letter Section -->
+<div id="applicationletter" class="section" style="display: none;">
+    <div class="container" style="text-align: center;">
+
+        <!-- Title -->
+        <div style="font-weight: bold; font-size: xx-large; position: absolute; margin-top: -15%; margin-left: -10%;">Application Letter</div>
+
+       
+
+        <!-- Date -->
+        <div style="font-weight: bold; font-size: medium; position: relative; margin-left: -86.8% ; margin-top: -10%;">November 5, 2024  </div>
+        <!-- Recipient Info -->
+        
+        <div style="font-weight: bold; font-size: medium; position: relative; margin-left: -17% ; margin-top: -37%;">   </div>
+            <div style="font-weight: bold; font-size: medium; position: relative; margin-left: -17% ; margin-top: -37%;">  </div>
+                <div style="font-weight: bold; font-size: medium; position: relative; margin-left: -17% ; margin-top: -37%;"> </div>
+                    <div style="font-weight: bold; font-size: medium; position: relative; margin-left: -17% ; margin-top: -37%;">  </div>
+        
+                </div>
+    
+
+
+        <!-- Body of the Letter -->
+        <div style="margin-top: -1px; line-height: 1.6; text-align: left;">
+            <div style="font-weight: bold; font-size: medium;  ">MS. MARIA VICTORIA E. KEITH </div>
+            <div style="font-weight: bold; font-size: medium;  ">Acting TAS Head – Ilocos Region Pag-IBIG Fund,</div>
+            <div style="font-weight: bold; font-size: medium;  ">Government Center, Barangay Sevilla,</div>
+            <div style="font-weight: bold; font-size: medium;  ">San Fernando City, La Union</div>
+
+
+            <p>Dear Sir / Ma’am,</p>
+            <p>I, Geraldine A. Dadural, am strongly interested in applying for the position of Management and Technical Support Assistant as posted on your website under Pag-IBIG Fund Job Vacancies.</p>
+            <p>For your information, I had my internship at the respected cooperative (LUMPC), where I gained valuable experience and developed a strong respect for your commitment to community development and excellent service.</p>
+            <p>I recently graduated with a degree in Computer Science, acquiring skills in software development, data management, PHP, MySQL, Java Swing, web development, Microsoft Office applications, and software testing. Additionally, I led a thesis project that was a candidate for the National Thesis Conference in San Fernando, La Union. My hands-on training at LUMPC improved my technical skills and teamwork. I also hold certificates in Adobe Photoshop and PC Troubleshooting and have attended seminars on financial literacy and investment planning.</p>
+            <p>Attached are my resume and other essential documents. Should you schedule an interview, I am available at your most convenient time. God bless.</p>
+            <p>Thank you for considering my application.</p>
+        </div>
+
+        <!-- Closing -->
+        <div style="margin-top: 40px;">
+            <div>Respectfully yours,</div>
+            <div style="font-weight: bold; margin-top: 10px;">Geraldine A. Dadural</div>
+            <div>San Nicolas East, Agoo, La Union</div>
+            <div style="margin-bottom: 20px;">Phone #: 09664914130</div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Typed.js for typing text effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        // Show and hide sections based on the clicked link
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        document.getElementById("moreInfoBtn").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevents default link behavior
+            var moreInfo = document.getElementById("moreInfo");
+            moreInfo.style.display = moreInfo.style.display === "none" ? "block" : "none";
+        });
+
+        // Navbar toggle button
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        // Typed.js initialization
+        var typed = new Typed(".input", {
+            strings: ["Frontend Developer", "Data Encoder", "Web Developer"],
+            typedSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+
+        function togglePersonalInfo() {
+            var personalInfo = document.getElementById("personal-info");
+            personalInfo.style.display = personalInfo.style.display === "none" ? "block" : "none";
+        }
+
+        function toggleFamilyBackground() {
+            var familyBackground = document.getElementById("family-background");
+            familyBackground.style.display = familyBackground.style.display === "none" ? "block" : "none";
+        }
+
+        function toggleWorkExperience() {
+            var workExperience = document.getElementById("work-experience");
+            workExperience.style.display = workExperience.style.display === "none" ? "block" : "none";
+        }
+
+        function toggleSkills() {
+            var skills = document.getElementById("skills");
+            skills.style.display = skills.style.display === "none" ? "block" : "none";
+        }
+
+        function toggleAchievements() {
+            var achievements = document.getElementById("achievements");
+            achievements.style.display = achievements.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>
